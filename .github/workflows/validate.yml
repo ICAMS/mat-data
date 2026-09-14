@@ -1,0 +1,50 @@
+name: Validate material entries
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out mat-data (this repo)
+        uses: actions/checkout@v4
+        with:
+          path: mat-data
+
+      - name: Check out mat-data-handler (validator)
+        uses: actions/checkout@v4
+        with:
+          repository: ICAMS/mat-data-handler
+          # Pin to a released tag once available, e.g. ref: core-v0.1.0
+          ref: main
+          path: mat-data-handler
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validator
+        run: pip install ./mat-data-handler/packages/mat-data-handler
+
+      - name: Validate entries against schema
+        run: |
+          mat-build-database \
+            --entries mat-data/entries \
+            --schemas mat-data/schemas \
+            --output /tmp/mat-data.yaml \
+            --validate-only
+
+      - name: Build combined collection (optional artifact)
+        run: |
+          mat-build-database \
+            --entries mat-data/entries \
+            --schemas mat-data/schemas \
+            --output /tmp/mat-data.yaml
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mat-data-collection
+          path: /tmp/mat-data.yaml
