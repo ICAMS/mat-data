@@ -1,4 +1,5 @@
-# Draft authoring template; illustrative values, not a calibrated material.
+# Draft authoring template for material parameters used in ICAMS Crystal Plasticity UMAT
+# illustrative values, not a calibrated material
 # Copy to entries/<stable-material-key>.yaml and replace values and provenance.
 # The filename stem becomes the combined database key; no outer key is needed.
 phase_identifier: "Example FCC material"
@@ -25,6 +26,7 @@ constitutive_model:
     hardening_exponent: 1.0
     self_hardening: 1.0
     cross_hardening: 1.4
+    # flags specific for ICAMS CP-UMAT
     flag_isotropic_hardening: 1
     flag_back_stress: 0  # 0: none; 1: FA; 2: Chaboche; 3: Ohno-Wang
     flag_gradient_plasticity: 0

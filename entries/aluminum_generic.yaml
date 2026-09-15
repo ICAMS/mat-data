@@ -7,18 +7,18 @@
   "$schema": "https://raw.githubusercontent.com/Ronakshoghi/MiMeDat/main/crystal_plasticity_constitutive_model_metadata_schema.json"
   "elastic_model_name": "Anisotropic Elasticity"
   "elastic_parameters":
-    "C11": 247000.0
-    "C12": 147000.0
-    "C44": 125000.0
+    "C11": 107800.0  # MPa
+    "C12": 60400.0  # MPa
+    "C44": 28300.0  # MPa
   "plastic_model_name": "ICAMS CP-UMAT"
   "plastic_parameters":
     "number_slip_systems": 12
     "reference_shear_rate": 1.0e-06
     "stress_exponent": 20.0
     "hardening_exponent": 2.25
-    "initial_critical_resolved_shear_stress": 20.0
-    "saturated_slip_resistance": 1500.0
-    "reference_hardening_rate": 60.0
+    "initial_critical_resolved_shear_stress": 20.0   # MPa
+    "saturated_slip_resistance": 1500.0  # MPa
+    "reference_hardening_rate": 60.0  # MPa
     "self_hardening": 1.0
     "cross_hardening": 1.4
     "flag_trip": 0

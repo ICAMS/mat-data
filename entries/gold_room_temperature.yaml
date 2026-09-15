@@ -8,18 +8,18 @@ reference: "CP parameters: https://doi.org/10.1016/j.actamat.2025.121798, Elasti
 constitutive_model:
   elastic_model_name: "Anisotropic Elasticity"
   elastic_parameters:
-    C11: 186000.0  
-    C12: 157000.0  
-    C44: 42000.0 
+    C11: 186000.0   # MPa
+    C12: 157000.0   # MPa
+    C44: 42000.0   # MPa
   plastic_model_name: "ICAMS CP-UMAT"
   plastic_parameters:
     number_slip_families: 1
     number_slip_systems: 12
     reference_shear_rate: 0.001  
     stress_exponent: 50.0  
-    initial_critical_resolved_shear_stress: 134.2  
-    saturated_slip_resistance: 189.0            
-    reference_hardening_rate: 2000.0              
+    initial_critical_resolved_shear_stress: 134.2   # MPa
+    saturated_slip_resistance: 189.0   # MPa
+    reference_hardening_rate: 2000.0   # MPa      
     hardening_exponent: 1.0
     self_hardening: 1.0
     cross_hardening: 1.4

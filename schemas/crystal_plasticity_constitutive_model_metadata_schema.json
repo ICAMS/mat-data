@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "CP constitutive model (cp-work)",
+  "title": "CP constitutive model",
   "version": "2.0.0",
   "type": "object",
   "required": [
