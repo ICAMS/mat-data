@@ -1,6 +1,6 @@
 # mat-data – Material Data Repository for Crystal Plasticity
 
-Repository for material oarameters intended to be used with crystal plasticity consitutive models. Validated crystal-plasticity material parameter sets: individual YAML entries
+Repository for material parameters intended to be used with crystal plasticity constitutive models. Validated crystal-plasticity material parameter sets: individual YAML entries
 under [entries/](entries/), JSON schemas under [schemas/](schemas/). Currently supported crystal plasticity models are [ICAMS CP-UMAT](https://github.com/ICAMS/Crystal_Plasticity_UMAT.git) and [DAMASK phenopowerlaw](https://damask-multiphysics.org/3.0.0-alpha8/documentation/file_formats/material_yaml/phase/phenopowerlaw.html).  
 A mapping table for YAML keywords to Abaqus `PROPS` for use with ICAMS CP-UMAT is provided in [mapping\_icams\_cp.csv](mapping_icams_cp.csv). 
 
