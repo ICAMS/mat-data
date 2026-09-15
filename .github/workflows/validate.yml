@@ -27,7 +27,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install validator
-        run: pip install ./mat-data-handler/packages/mat-data-handler
+        run: pip install ./mat-data-handler
 
       - name: Validate entries against schema
         run: |
